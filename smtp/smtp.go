@@ -3,12 +3,12 @@ package smtp
 import (
 	"bytes"
 	"fmt"
-	"logs-monitoring/utils"
+	"logs-monitoring/config"
 	"mime/quotedprintable"
 	"net/smtp"
 )
 
-var log = utils.InitLogger()
+var log = config.InitLogger()
 
 func SendNotification(level, msg string) {
 	const (
@@ -55,7 +55,6 @@ func SendNotification(level, msg string) {
 	if err != nil {
 		log.Fatal("Error send", err.Error())
 	}
-
 }
 
 func quotedprintableEncode(str string) string {

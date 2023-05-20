@@ -3,6 +3,7 @@ package rabbitmq
 import (
 	"fmt"
 	"github.com/streadway/amqp"
+	 "logs-monitoring/mongodb"
 )
 
 func ConsumerMQ() {
@@ -46,6 +47,7 @@ func ConsumerMQ() {
 
 			for d := range msgs {
 				fmt.Printf("Received a message: %s", d.Body)
+				mongodb.AddLog(d.Body)
 			}
 		}
 	}

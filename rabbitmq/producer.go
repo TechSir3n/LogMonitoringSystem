@@ -5,11 +5,11 @@ import (
 	"github.com/streadway/amqp"
 	"logs-monitoring/models"
 	"logs-monitoring/smtp"
-	"logs-monitoring/utils"
+	"logs-monitoring/config"
 	"os"
 )
 
-var log = utils.InitLogger()
+var log = config.InitLogger()
 
 func ProducerMQ() {
 	connections := make([]*amqp.Connection, 3)

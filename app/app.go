@@ -5,6 +5,6 @@ import (
 )
 
 func Run() { 
-	  rabbitmq.ProducerMQ()
-	  rabbitmq.ConsumerMQ()
+	rabbitmq.ProducerMQ()
+	rabbitmq.ConsumerMQ()
 }

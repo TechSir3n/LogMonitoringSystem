@@ -4,18 +4,30 @@
 
 
 ## Got Notification to email in case critical error in system app 
-Description: an error occurred while sending a message to rabbitmq
-From: myusername1234@mail.ru
-To: recipient@mail.ru
-Subject: Logs Notification
-MIME-Version: 1.0
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: quoted-printable
-Level: error 
+Description: an error occurred while sending a message to rabbitmq<br>
+From: myusername1234@mail.ru<br>
+To: recipient@mail.ru<br>
+Subject: Logs Notification<br>
+MIME-Version: 1.0<br>
+Content-Type: text/plain; charset="utf-8"<br>
+Content-Transfer-Encoding: quoted-printable<br>
+Level: error <br>
+
+## Logs Example
+```json
+{"level":"info","msg":"Success connected to mongoDB","time":"2023-05-20T16:52:15+03:00"}
+
+{"level":"info","msg":"Connected to rabbitMq Success [Producer]","time":"2023-05-20T17:03:53+03:00"}
+
+{"level":"error","msg":"cannot transform type bson.Raw to a BSON Document: length read exceeds number of bytes available. length=37 bytes=1701585531","time":"2023-05-20T17:32:49+03:00"}
+
+
+{"level":"fatal","msg":"Couldn't connect to rabbitMq [Producer]dial tcp 127.0.0.1:5673: connect: connection refused","time":"2023-05-20T17:17:45+03:00"}
+```
 
 ## Task need to do 
 1. Implement log filtering by severity level (debug, info, warning, error, critical) and send only necessary logs. **Done**
-2. Add the ability to save logs to the database for further analysis.
+2. Add the ability to save logs to the database for further analysis. **Done**
 3. Write a script to automatically delete old logs so as not to take up much disk space.
 4. Implement the ability to send notifications of critical errors via email or SMS. **Done**
 5. Add support for various log formats (JSON, CSV, XML, etc.).
