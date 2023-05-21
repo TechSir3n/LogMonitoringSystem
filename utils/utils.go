@@ -10,6 +10,8 @@ import (
 
 var logger = config.InitLogger()
 
+const MAX_FILE_SIZE = 2048
+
 type LogLevel struct {
 	Level   string `json:"level"`
 	Message string `json:"message"`
@@ -44,4 +46,46 @@ func ReadFile(level string) (string, error) {
 	}
 
 	return result.String(), nil
+}
+
+func ClearLogFiles() bool {
+	file, err := os.OpenFile("loggers.log", os.O_RDWR, 0755)
+	if err != nil {
+		logger.Error("Failed open file loggers.log", err.Error())
+		return false
+	}
+	defer file.Close()
+
+	fileNginx, err := os.OpenFile("/var/log/nginx/error.log.1", os.O_RDWR, 0755)
+	if err != nil {
+		logger.Error("Failed open file error.log", err.Error())
+		return false
+	}
+	defer fileNginx.Close()
+
+	stat, err := file.Stat()
+	if err != nil {
+		return false
+	}
+
+	statNginx, err := fileNginx.Stat()
+	if err != nil {
+		return false
+	}
+
+	if stat.Size() > MAX_FILE_SIZE {
+		err = file.Truncate(0)
+		if err != nil {
+			return false
+		}
+		return true
+	} else if statNginx.Size() > MAX_FILE_SIZE {
+		err = fileNginx.Truncate(0)
+		if err != nil {
+			return false
+		}
+		return true
+	}
+
+	return false
 }

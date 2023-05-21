@@ -47,7 +47,7 @@ make run
 ## Task need to do 
 1. Implement log filtering by severity level (debug, info, warning, error, critical) and send only necessary logs. **Done**
 2. Add the ability to save logs to the database for further analysis. **Done**
-3. Write a script to automatically delete old logs so as not to take up much disk space.
+3. Write a script to automatically delete old logs so as not to take up much disk space. **Done**
 4. Implement the ability to send notifications of critical errors via email or SMS. **Done**
 5. Add support for various log formats (JSON, CSV, XML, etc.).
 6. Implement application performance monitoring based on logs (request processing speed, response time, etc.).
