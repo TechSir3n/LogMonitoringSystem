@@ -3,7 +3,7 @@ package rabbitmq
 import (
 	"fmt"
 	"github.com/streadway/amqp"
-	 "logs-monitoring/mongodb"
+	"logs-monitoring/mongodb"
 )
 
 func ConsumerMQ() {
@@ -12,9 +12,9 @@ func ConsumerMQ() {
 		conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
 		connections[i] = conn
 		if err != nil {
-			log.Fatal("Couldn't connect to rabbitMq [Producer]", err.Error())
+			log.Fatal("Couldn't connect to rabbitMq [Consumer]", err.Error())
 		} else {
-			log.Info("Connected to rabbitMq Success [Producer]")
+			log.Info("Connected to rabbitMq Success [Consumer]")
 		}
 	}
 
@@ -45,10 +45,13 @@ func ConsumerMQ() {
 				log.Errorf("Failed to consume from queue %s: %s", queueName, err)
 			}
 
-			for d := range msgs {
-				fmt.Printf("Received a message: %s", d.Body)
-				mongodb.AddLog(d.Body)
-			}
+			go func() {
+				for d := range msgs {
+					fmt.Printf("Received a message: %s", d.Body)
+					mongodb.AddLog(d.Body)
+				}
+			}()
 		}
 	}
+	select {}
 }

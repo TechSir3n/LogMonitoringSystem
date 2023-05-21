@@ -52,7 +52,7 @@ func ProducerMQ() {
 		}
 	}
 
-	file, err := os.Open("/var/log/nginx/error.log")
+	file, err := os.Open("/var/log/nginx/error.log.1")
 	if err != nil {
 		log.Error("Failed to open a file", err.Error())
 	}
