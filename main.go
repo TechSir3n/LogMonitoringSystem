@@ -1,9 +1,9 @@
-package main 
+package main
 
 import (
-   "logs-monitoring/app"
+	"logs-monitoring/app"
 )
 
-func main() { 
+func main() {
 	app.Run()
 }

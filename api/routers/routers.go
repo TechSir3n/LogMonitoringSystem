@@ -1,8 +1,8 @@
 package routers
 
 import (
-	"logs-monitoring/api/handlers"
 	"github.com/gin-gonic/gin"
+	"logs-monitoring/api/handlers"
 )
 
 func init() {
@@ -12,5 +12,5 @@ func init() {
 		handlers.LogLevelHandler(c)
 	})
 
-	router.Run() // default localhost and port 8080 
+	go router.Run() // default localhost and port 8080
 }

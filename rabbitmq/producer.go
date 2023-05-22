@@ -3,9 +3,9 @@ package rabbitmq
 import (
 	"encoding/json"
 	"github.com/streadway/amqp"
+	"logs-monitoring/config"
 	"logs-monitoring/models"
 	"logs-monitoring/smtp"
-	"logs-monitoring/config"
 	"os"
 )
 

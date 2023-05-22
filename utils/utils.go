@@ -36,6 +36,8 @@ func ReadFile(level string) (string, error) {
 
 		if level == log.Level {
 			result.WriteString(log.Message)
+		} else if level == "all" {
+			result.WriteString(log.Message)
 		} else {
 			logger.Error("Didn't find match level in file")
 		}

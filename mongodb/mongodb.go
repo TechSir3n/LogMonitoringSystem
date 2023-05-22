@@ -41,8 +41,3 @@ func DeleteLogs() {
 		logger.Info("Success deleted logs", deleteResult.DeletedCount)
 	}
 }
-
-
-func GetLogs(str string) { 
-
-}

@@ -35,6 +35,18 @@ Level: error
 {"level":"info","msg":"Success inserted with ObjectID(\"6469cd3e43cffc658603027b\")","time":"2023-05-21T10:50:22+03:00"}
 ```
 
+## Docker-compose
+Server is ready immediately after containers are up
+```shell
+ make compose        #docker-compose up
+```
+
+## Dockerfile 
+```shell
+make docker-build   #docker build -t logs-monitoring .
+make docker-run     #docker run logs-monitoring
+```
+
 ## Build / Run
 
 ```shell

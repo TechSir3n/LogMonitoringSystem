@@ -1,10 +1,10 @@
-package models 
+package models
 
-type LogEntry struct { 
-	Level string `json:"level"`
+type LogEntry struct {
+	Level   string `json:"level"`
 	Message string `json:"message"`
 }
 
-type LogLevel struct  { 
+type LogLevel struct {
 	Level string `json:"level"`
 }
