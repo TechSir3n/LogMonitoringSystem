@@ -15,7 +15,7 @@ func AddLog(log []byte) {
 	client := config.ConnectToMongoDB()
 	collection := client.Database("LogsMonitoring").Collection("Logs")
 
-	var logs models.LogEntry
+	var logs models.LogFormatJSON
 	if err := json.Unmarshal(log, &logs); err != nil {
 		logger.Error("Couldn't unmarshal log's structure", err.Error())
 	}

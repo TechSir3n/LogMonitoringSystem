@@ -60,8 +60,8 @@ func ProducerMQ() {
 	defer file.Close()
 
 	currentIndex := 0
-	var obj models.LogEntry
-	var entry models.LogEntry
+	var obj models.LogFormatJSON
+	var entry models.LogFormatJSON
 	decoder := json.NewDecoder(file)
 
 	for {

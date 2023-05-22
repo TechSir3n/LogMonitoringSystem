@@ -12,5 +12,9 @@ func init() {
 		handlers.LogLevelHandler(c)
 	})
 
+	router.POST("/get/type/log", func(c *gin.Context) {
+		handlers.LogFormatHandler(c)
+	})
+
 	go router.Run() // default localhost and port 8080
 }

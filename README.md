@@ -61,7 +61,7 @@ make run
 2. Add the ability to save logs to the database for further analysis. **Done**
 3. Write a script to automatically delete old logs so as not to take up much disk space. **Done**
 4. Implement the ability to send notifications of critical errors via email or SMS. **Done**
-5. Add support for various log formats (JSON, CSV, XML, etc.).
+5. Add support for various log formats (JSON, CSV, XML, etc.). **Done**
 6. Implement application performance monitoring based on logs (request processing speed, response time, etc.).
 7. Add the ability to aggregate logs from multiple sources (several servers or applications).
 8. Implement automatic detection of application problem areas based on logs and offer solutions to improve performance.

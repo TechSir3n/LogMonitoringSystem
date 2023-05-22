@@ -23,6 +23,7 @@ func LogLevelHandler(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Failed to find level logs"})
 		logger.Error(err.Error())
 	} else {
+		c.Header("Content-Type", "application/json")
 		c.JSON(http.StatusOK, gin.H{"level": level.Level, "message": msg})
 	}
 }

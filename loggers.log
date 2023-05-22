@@ -1,7 +1,0 @@
-{"level":"info","msg":"Connected to rabbitMq Success [Producer]","time":"2023-05-22T11:25:54+03:00"}
-{"level":"info","msg":"Connected to rabbitMq Success [Producer]","time":"2023-05-22T11:25:54+03:00"}
-{"level":"info","msg":"Connected to rabbitMq Success [Producer]","time":"2023-05-22T11:25:54+03:00"}
-{"level":"info","msg":"Connected to rabbitMq Success [Consumer]","time":"2023-05-22T11:25:58+03:00"}
-{"level":"info","msg":"Connected to rabbitMq Success [Consumer]","time":"2023-05-22T11:25:58+03:00"}
-{"level":"info","msg":"Connected to rabbitMq Success [Consumer]","time":"2023-05-22T11:25:58+03:00"}
-{"level":"error","msg":"Failed unmarhshal,function[ReadFile]unexpected end of JSON input","time":"2023-05-22T11:26:00+03:00"}
