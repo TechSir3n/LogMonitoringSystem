@@ -4,7 +4,6 @@ import (
 	"logs-monitoring/models"
 	"logs-monitoring/utils"
 	"net/http"
-
 	"github.com/gin-gonic/gin"
 )
 

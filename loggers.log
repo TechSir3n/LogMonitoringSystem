@@ -1,0 +1,14 @@
+{"level":"info","msg":"Connected to rabbitMq Success [Producer]","time":"2023-05-22T13:54:28+03:00"}
+{"level":"info","msg":"Connected to rabbitMq Success [Producer]","time":"2023-05-22T13:54:28+03:00"}
+{"level":"info","msg":"Connected to rabbitMq Success [Producer]","time":"2023-05-22T13:54:28+03:00"}
+{"level":"info","msg":"Connected to rabbitMq Success [Consumer]","time":"2023-05-22T13:54:33+03:00"}
+{"level":"info","msg":"Connected to rabbitMq Success [Consumer]","time":"2023-05-22T13:54:33+03:00"}
+{"level":"info","msg":"Connected to rabbitMq Success [Consumer]","time":"2023-05-22T13:54:33+03:00"}
+{"level":"error","msg":"Failed connect to mongodbserver selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp 127.0.0.1:27017: connect: connection refused }, ] }","time":"2023-05-22T13:55:03+03:00"}
+{"level":"error","msg":"Failed connect to mongodbserver selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp 127.0.0.1:27017: connect: connection refused }, ] }","time":"2023-05-22T13:55:03+03:00"}
+{"level":"error","msg":"Failed connect to mongodbserver selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp 127.0.0.1:27017: connect: connection refused }, ] }","time":"2023-05-22T13:55:03+03:00"}
+{"level":"error","msg":"server selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp 127.0.0.1:27017: connect: connection refused }, ] }","time":"2023-05-22T13:55:33+03:00"}
+{"level":"error","msg":"server selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp 127.0.0.1:27017: connect: connection refused }, ] }","time":"2023-05-22T13:55:33+03:00"}
+{"level":"error","msg":"server selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp 127.0.0.1:27017: connect: connection refused }, ] }","time":"2023-05-22T13:55:33+03:00"}
+{"level":"error","msg":"Failed connect to mongodbserver selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp 127.0.0.1:27017: connect: connection refused }, ] }","time":"2023-05-22T13:56:03+03:00"}
+{"level":"error","msg":"server selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp 127.0.0.1:27017: connect: connection refused }, ] }","time":"2023-05-22T13:56:33+03:00"}

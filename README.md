@@ -35,6 +35,24 @@ Level: error
 {"level":"info","msg":"Success inserted with ObjectID(\"6469cd3e43cffc658603027b\")","time":"2023-05-21T10:50:22+03:00"}
 ```
 
+## Prometheus example 
+```yaml
+# TYPE promhttp_metric_handler_requests_total counter
+promhttp_metric_handler_requests_total{code="200"} 1
+promhttp_metric_handler_requests_total{code="500"} 0
+promhttp_metric_handler_requests_total{code="503"} 0
+
+# TYPE response_time_seconds histogram
+response_time_seconds_bucket{endpoint="/metrics",method="GET",le="0.1"} 1
+response_time_seconds_bucket{endpoint="/metrics",method="GET",le="0.2"} 1
+response_time_seconds_bucket{endpoint="/metrics",method="GET",le="0.4"} 1
+response_time_seconds_sum{endpoint="/metrics",method="GET"} 0.001390073
+response_time_seconds_count{endpoint="/metrics",method="GET"} 1
+... 
+# TYPE requests_total counter
+requests_total{endpoint="/metrics",method="GET"} 1
+```
+
 ## Docker-compose
 Server is ready immediately after containers are up
 ```shell
@@ -64,6 +82,6 @@ make run
 5. Add support for various log formats (JSON, CSV, XML, etc.). **Done**
 6. Implement application performance monitoring based on logs (request processing speed, response time, etc.).
 7. Add the ability to aggregate logs from multiple sources (several servers or applications).
-8. Implement automatic detection of application problem areas based on logs and offer solutions to improve performance.
+8. Implement automatic detection of application problem areas based on logs and offer solutions to improve performance.**Done**
 9. Add support for multilingual logs (localization).
 10. Implement the ability to configure the rules for processing logs through the web interface or the configuration file. **Done**
